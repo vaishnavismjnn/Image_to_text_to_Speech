@@ -3,9 +3,7 @@ import pytesseract
 from gtts import gTTS
 import os
 
-# Path to the Tesseract-OCR executable (only required for Windows)
-# For Windows, specify the path to tesseract.exe:
-# Example: pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+
 # For Linux/Mac, if installed correctly, you can skip this step.
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
@@ -50,3 +48,4 @@ if __name__ == "__main__":
     output_audio_path = 'output_speech.mp3'  # Output audio path
     
     main(image_path, output_audio_path)
+
