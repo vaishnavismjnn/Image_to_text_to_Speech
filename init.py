@@ -24,13 +24,12 @@ def text_to_speech(text, output_audio_path):
     print(f"Audio saved at: {output_audio_path}")
 
 def main(image_path, output_audio_path):
-    # Step 1: Convert Image to Text
+   
     extracted_text = image_to_text(image_path)
     
     if extracted_text.strip():  # Check if any text is extracted
         print("Extracted Text:", extracted_text)
         
-        # Step 2: Convert Text to Speech
         text_to_speech(extracted_text, output_audio_path)
     else:
         print("No text detected in the image.")
@@ -41,5 +40,6 @@ if __name__ == "__main__":
     output_audio_path = 'output_speech.mp3'  
     
     main(image_path, output_audio_path)
+
 
 
