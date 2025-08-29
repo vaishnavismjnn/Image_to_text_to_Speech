@@ -2,15 +2,10 @@ from PIL import Image
 import pytesseract
 from gtts import gTTS
 import os
-
-
-# For Linux/Mac, if installed correctly, you can skip this step.
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 def image_to_text(image_path):
-    #"""
-    #Converts image to text using Tesseract OCR.
-   # """
+   
     # Open an image file
     img = Image.open('C://Users//DELL//Documents//miniproject//image2.jpg')
     
@@ -20,9 +15,7 @@ def image_to_text(image_path):
     return extracted_text
 
 def text_to_speech(text, output_audio_path):
-    """
-    Converts text to speech and saves it as an audio file.
-    """
+    
     # Use Google Text-to-Speech (gTTS)
     tts = gTTS(text)
     
@@ -43,9 +36,10 @@ def main(image_path, output_audio_path):
         print("No text detected in the image.")
 
 if __name__ == "__main__":
-    # Input image path and output audio path
-    image_path = 'image_sample.png'  # Replace with your image path
-    output_audio_path = 'output_speech.mp3'  # Output audio path
+  
+    image_path = 'image_sample.png'  
+    output_audio_path = 'output_speech.mp3'  
     
     main(image_path, output_audio_path)
+
 
